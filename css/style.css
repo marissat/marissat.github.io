@@ -1,0 +1,634 @@
+/* Custom CSS for my personal website. */
+
+*,
+:after,
+:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+::-moz-selection {
+	background: #fff10d;
+}
+
+::selection {
+	background: #fff10d;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	color: #444452;
+	font-family: 'Roboto', 'Raleway', Source Sans Pro, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+}
+
+body h4,
+html h4 {
+	font-weight: normal;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+body a,
+html a {
+	text-decoration: none;
+	text-decoration-style: none;
+	font-weight: 700;
+	color: #36363c;
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+}
+
+body a:hover,
+html a:hover {
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+body a:link,
+html a:link {
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+body ul,
+html ul {
+	list-style: none;
+	padding: 0;
+	margin: 7px 0 0 0;
+}
+
+body strong,
+html strong {
+	font-weight: 700;
+	color: #36363c;
+}
+
+body .header_top,
+html .header_top {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+body .section,
+html .section {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding: 100px 170px;
+	visibility: hidden;
+}
+
+body .section__title,
+html .section__title {
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	width: 200px;
+	margin-right: 70px;
+	color: #007bff;
+	text-transform: uppercase;
+	text-align: right;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+body .section__content,
+html .section__content {
+	font-weight: 300;
+	font-size: 1rem;
+	width: 100%;
+	max-width: 650px;
+}
+
+body .section__content p,
+html .section__content p {
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+
+body .small,
+html .small {
+	font-family: Inconsolata, monospace;
+	font-size: 0.85rem;
+	display: inline-block;
+	margin-top: 15px;
+}
+
+body .small:after,
+html .small:after {
+	display: none;
+}
+
+
+/* Button that takes you back to the top of the page. */
+body #top-button,
+html #top-button {
+	border: none;
+	outline: 0;
+	width: 40px;
+	position: fixed;
+	bottom: 16px;
+	right: 15px;
+	cursor: pointer;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+body #top-button:hover,
+html #top-button:hover {
+	-webkit-transform: translate(0px, -10px);
+	-moz-transform: translate(0px, -10px);
+	-ms-transform: translate(0px, -10px);
+	-o-transform: translate(0px, -10px);
+	transform: translate(0px, -10px);
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+body #top-button:visited,
+html #top-button:visited {
+	-webkit-transform: translateY(8px);
+	transform: translateY(8px);
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+
+/* "SKILLS" section. */
+.skills_title .skills {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	visibility: hidden;
+}
+
+.skills_title .skills__category__label {
+	font-weight: 700;
+	color: #36363c;
+	text-transform: uppercase;
+}
+
+.skills_title .skills__category__item {
+	margin: 2px 0;
+	font-size: 16px;
+}
+
+/* "EXPERIENCE" section. */
+.experience .jobs {
+	margin-bottom: 100px;
+}
+
+.experience .job {
+	margin-bottom: 25px;
+}
+
+.experience .job .time-place {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.experience .job__company {
+	font-weight: bold;
+}
+
+.experience .job__time {
+	font-size: 16px;
+	font-family: Inconsolata, monospace;
+}
+
+
+
+/* LED bullet. */
+.status {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 1.2rem;
+	font-family: Inconsolata, monospace;
+	margin-top: 70px;
+	color: #131417;
+}
+
+.status__light {
+	width: 20px;
+	height: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.status__light__ring {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	-webkit-animation: pulsate 2s ease-out;
+	animation: pulsate 2s ease-out;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	opacity: 0;
+	border: 3px solid #bada55;
+	border-radius: 30px;
+}
+@-webkit-keyframes pulsate {
+	0% {
+		-webkit-transform: scale(.1, .1);
+		transform: scale(.1, .1);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: scale(1.2, 1.2);
+		transform: scale(1.2, 1.2);
+		opacity: 0;
+	}
+}
+@keyframes pulsate {
+	0% {
+		-webkit-transform: scale(.1, .1);
+		transform: scale(.1, .1);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: scale(1.2, 1.2);
+		transform: scale(1.2, 1.2);
+		opacity: 0;
+	}
+}
+
+.status__light__led {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #bada55;
+	border-radius: 100%;
+}
+
+.status__message {
+	margin-left: 15px;
+}
+
+/* Footer. */
+.footer {
+	padding-top: 50px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	margin-right: 4px;
+	width: 1174px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.footer__copyright {
+	font-weight: 400;
+	width: 200px;
+	padding-left: 10px;
+}
+
+.footer__links a {
+	position: relative;
+	display: inline-block;
+	color: #007bff!important;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 0 15px;
+	outline: 0;
+	text-decoration: none;
+	text-decoration-style: none;
+	font-size: 1.8em;
+}
+
+.footer__links a:after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #007bff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+	text-decoration: none;
+	text-decoration-style: none;
+	font-size: 1.8em;
+}
+
+.footer__links a:hover {
+	text-decoration: none;
+	text-decoration-style: none;
+	font-size: 1.8em;
+}
+
+.footer__links a:link {
+	text-decoration: none;
+	text-decoration-style: none;
+	font-size: 1.8em;
+}
+
+.footer__links a:focus:after,
+.footer__links a:hover:after {
+	height: 2px;
+	border-radius: 3px;
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+.footer__links a .text {
+	font-size: 0.9rem;
+	display: inline;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+/* ** page not found??? ** */
+.not-found {
+	width: 100%;
+	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+	padding: 0 20px;
+}
+
+.not-found .name {
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	font-weight: 700;
+	color: #007bff;
+	font-size: 1.5rem;
+}
+
+.not-found h1 {
+	font-size: 4rem;
+	margin: 10px 0;
+}
+
+.not-found h2 {
+	font-size: 1.5rem;
+}
+
+.not-found a {
+	font-weight: 700;
+	color: #007bff!important;
+	position: relative;
+	display: inline-block;
+}
+
+.not-found a:after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #007bff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.not-found a:focus:after,
+.not-found a:hover:after {
+	height: 3px;
+	opacity: 1;
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* Button that scrolls down to the "skills" section. */
+body #down-button,
+html #down-button {
+	border: none;
+	outline: 0;
+	cursor: pointer;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+body #down-button:hover,
+html #down-button:hover {
+	-webkit-transform: translate(0px, -10px);
+	-moz-transform: translate(0px, -10px);
+	-ms-transform: translate(0px, -10px);
+	-o-transform: translate(0px, -10px);
+	transform: translate(0px, -10px);
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+body #down-button:visited,
+html #down-button:visited {
+	-webkit-transform: translateY(8px);
+	transform: translateY(8px);
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+
+
+
+
+
+/* Button that scrolls down to the "experience" section. */
+body #middle-button,
+html #middle-button {
+	border: none;
+	outline: 0;
+	cursor: pointer;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+body #middle-button:hover,
+html #middle-button:hover {
+	-webkit-transform: translate(0px, -10px);
+	-moz-transform: translate(0px, -10px);
+	-ms-transform: translate(0px, -10px);
+	-o-transform: translate(0px, -10px);
+	transform: translate(0px, -10px);
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+body #middle-button:visited,
+html #middle-button:visited {
+	-webkit-transform: translateY(8px);
+	transform: translateY(8px);
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tooltip for the button that scrolls down to the "skills" section. */
+.down-button .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+	
+    position: absolute;
+    z-index: 1;
+    
+	top: 10px;
+    left: 57%;
+    
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.down-button .tooltiptext::after {
+    content: "";
+    position: absolute;
+	top: 30%;
+    right: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+
+.down-button:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+/* Tooltip for the button that scrolls down to the "experience" section. */
+.middle-button .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+	
+    position: absolute;
+    z-index: 1;
+    
+	top: 10px;
+    left: 57%;
+    
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.middle-button .tooltiptext::after {
+    content: " ";
+    position: absolute;
+	top: 30%;
+    right: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+
+.middle-button:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
