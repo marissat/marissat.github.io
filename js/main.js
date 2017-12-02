@@ -1,7 +1,7 @@
 // Custom JavaScript for my personal website.
 
+
 // Reset page to top when the page is refreshed.
-// https://stackoverflow.com/a/11486546
 $(document).ready(function(){
 	$('html').animate({scrollTop:0}, 1);
 	$('body').animate({scrollTop:0}, 1);
@@ -10,46 +10,29 @@ $(document).ready(function(){
 
 
 
-/*
-
-	SCROLL REVEAL SETTINGS:
-	
-	
-	https://github.com/jlmakes/scrollreveal
-	https://scrollrevealjs.org/
-
-*/
-
-// GENERAL SETTING
+// General ScrollReveal settings.
 window.sr = ScrollReveal({ 
 	reset: true 
 });
 
-// Custom Settings
-sr.reveal(".section"), sr.reveal(".background"), sr.reveal(".skills"), sr.reveal(".experience", {
+// Custom ScrollReveal settings.
+sr.reveal(".section"), sr.reveal(".skills_title"), sr.reveal(".background"), sr.reveal(".skills"), sr.reveal(".experience", {
 	duration: 3000 
 });
 
 
-
-// Button that takes you to the top of the page.
-// $(function() {
-// 	$('#bottom-button').click(function() {
-// 		$('html, body').animate({
-// 			scrollTop: $("#top").offset().top
-// 		}, 'slow');
-// 	});
-// });
 
 
 // Button that takes you to the top of the "skills" section.
 $(function() {
 	$('#down-button').click(function() {
 		$('html, body').animate({
-			scrollTop: $("#skills_section").offset().top - 130
+			scrollTop: $("#skills_section").offset().top - 110
 		}, 'slow');
 	});
 });
+
+
 
 // Button that takes you to the top of the "experience" section.
 $(function() {
@@ -62,17 +45,41 @@ $(function() {
 
 
 
+// Button that scrolls back to the top of the page.
 $(function() {
-	const a = document.getElementById("top-button"),
-		d = $("#top-button");
-	a.addEventListener("click", function() {
+	const r = document.querySelector("#header_top").offsetHeight,
+			a = document.getElementById("top-button"),
+			d = $("#top-button");
+			
+	window.addEventListener("scroll", function() {
+		window.scrollY > r ? d.fadeIn() : d.fadeOut(400)
+	}, !1), a.addEventListener("click", function() {
 		$("html, body").animate({
 			scrollTop: 0
-		}, 500)
+		}, 'slow')
 	});
-
+	
+	
 });
 
+
+
+$(function() {
+	const t = new Date,
+		o = t.getHours(),
+		n = o >= 19 || o <= 7,
+		c = document.querySelector("body"),
+		s = document.getElementById("toggle"),
+		i = document.getElementById("switch");
+	n && (i.checked = !0, c.classList.remove("night")), s.addEventListener("click", function() {
+		const e = i.checked;
+		e ? c.classList.add("night") : c.classList.remove("night")
+	});
+	
+	$(".starwars-toggle").click(function() {
+		$('#nav-container').toggleClass("pushed");
+	});
+});
 
 
 

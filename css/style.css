@@ -1,5 +1,6 @@
 /* Custom CSS for my personal website. */
 
+
 *,
 :after,
 :before {
@@ -75,6 +76,70 @@ html .header_top {
 	font-family: 'Roboto', sans-serif;
 }
 
+body .name,
+html .name {
+	font-size: 34px; 
+	font-weight: 400; 
+	line-height: 40px; 
+	margin-top: 20px; 
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width:480px) {
+	body .name,
+	html .name {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	body .name,
+	html .name {
+		margin-top: 40px;
+	}
+}
+
+.header_top {
+	padding: 20px 100px;
+	min-height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	margin: 0 auto;
+}
+
+@media screen and (max-width:850px) {
+	.header_top {
+		padding: 20px 30px;
+		margin: 0px;
+	}
+}
+
+@media screen and (max-width:630px) {
+	.header_top {
+		padding: 20px 70px;
+	}
+}
+
+@media screen and (max-width:550px) {
+	.header_top {
+		padding: 20px 50px;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.header_top {
+		padding: 70px 50px;
+	}
+}
+
+
 body .section,
 html .section {
 	display: -webkit-box;
@@ -84,8 +149,50 @@ html .section {
 	-ms-flex-pack: center;
 	justify-content: center;
 	padding: 100px 170px;
-	visibility: hidden;
 }
+
+@media screen and (max-width:1280px) {
+	body .section,
+	html .section {
+		padding: 100px;
+	}
+}
+
+@media screen and (max-width:1024px) {
+	body .section,
+	html .section {
+		padding: 50px;
+	}
+}
+
+@media screen and (max-width:850px) {
+	body .section,
+	html .section {
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width:768px) {
+	body .section,
+	html .section {
+		display: block;
+	}
+}
+
+@media screen and (max-width:480px) {
+	body .section,
+	html .section {
+		padding: 50px 35px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	body .section,
+	html .section {
+		padding: 5px;
+	}
+}
+
 
 body .section__title,
 html .section__title {
@@ -100,12 +207,50 @@ html .section__title {
 	letter-spacing: 2px;
 }
 
+@media screen and (max-width:1024px) {
+	body .section__title,
+	html .section__title {
+		margin-right: 50px;
+	}
+}
+
+@media screen and (max-width:850px) {
+	body .section__title,
+	html .section__title {
+		width: 150px;
+	}
+}
+
+@media screen and (max-width:768px) {
+	body .section__title,
+	html .section__title {
+		text-align: left;
+		width: auto;
+	}
+}
+
+
 body .section__content,
 html .section__content {
 	font-weight: 300;
 	font-size: 1rem;
 	width: 100%;
 	max-width: 650px;
+}
+
+@media screen and (max-width:768px) {
+	body .section__content,
+	html .section__content {
+		padding-top: 30px;
+		padding-left: 50px;
+	}
+}
+
+@media screen and (max-width:480px) {
+	body .section__content,
+	html .section__content {
+		padding-left: 30px;
+	}
 }
 
 body .section__content p,
@@ -128,11 +273,25 @@ html .small:after {
 }
 
 
+body .skills__category__label,
+html .skills__category__label {
+	width: auto;
+}
+
+body .skills__category,
+html .skills__category {
+	width: auto;
+	padding: 0px 15px;
+}
+
+
 /* Button that takes you back to the top of the page. */
 body #top-button,
 html #top-button {
 	border: none;
-	outline: 0;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	outline: none;
 	width: 40px;
 	position: fixed;
 	bottom: 16px;
@@ -143,26 +302,81 @@ html #top-button {
 	-ms-transition: all 0.25s ease;
 	-o-transition: all 0.25s ease;
 	transition: all 0.25s ease;
+	display: none;
 }
 
-body #top-button:hover,
-html #top-button:hover {
-	-webkit-transform: translate(0px, -10px);
-	-moz-transform: translate(0px, -10px);
-	-ms-transform: translate(0px, -10px);
-	-o-transform: translate(0px, -10px);
-	transform: translate(0px, -10px);
-	text-decoration: none;
-	text-decoration-style: none;
+
+body #top-button p,
+html #top-button p {
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
-body #top-button:visited,
-html #top-button:visited {
-	-webkit-transform: translateY(8px);
-	transform: translateY(8px);
-	text-decoration: none;
-	text-decoration-style: none;
+body #top-button i,
+html #top-button i {
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
+
+
+@media screen and (max-width:1024px) {
+	body #top-button,
+	html #top-button {
+		bottom: 18px;
+		right: 7px;
+		width: 35px;
+		border: none;
+		background-color: Transparent;
+		background-repeat: no-repeat;
+		outline: none;
+	}
+}
+
+@media screen and (max-width:850px) {
+	body #top-button,
+	html #top-button {
+		bottom: 14px;
+		right: 7px;
+		width: 35px;
+		border: none;
+		background-color: Transparent;
+		background-repeat: no-repeat;
+		outline: none;
+	}
+}
+
+@media screen and (max-width:480px) {
+	body #top-button,
+	html #top-button {
+		bottom: 12px;
+		right: 3px;
+		border: none;
+		background-color: Transparent;
+		background-repeat: no-repeat;
+		outline: none;
+	}
+}
+
+@media screen and (max-width:320px) {
+	body #top-button,
+	html #top-button {
+		border: none;
+		background-color: Transparent;
+		background-repeat: no-repeat;
+		outline: none;
+	}
+}
+
 
 
 /* "SKILLS" section. */
@@ -176,6 +390,23 @@ html #top-button:visited {
 	visibility: hidden;
 }
 
+
+@media screen and (max-width:630px) {
+	.skills_title .skills {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width:630px) {
+	.skills_title .skills__category {
+		width: 47%;
+		margin-right: 5px;
+		margin-bottom: 25px;
+	}
+}
+
+
 .skills_title .skills__category__label {
 	font-weight: 700;
 	color: #36363c;
@@ -186,6 +417,8 @@ html #top-button:visited {
 	margin: 2px 0;
 	font-size: 16px;
 }
+
+
 
 /* "EXPERIENCE" section. */
 .experience .jobs {
@@ -205,6 +438,14 @@ html #top-button:visited {
 	justify-content: space-between;
 }
 
+@media screen and (max-width:480px) {
+	.experience .job .time-place {
+		display: block
+	}
+}
+
+
+
 .experience .job__company {
 	font-weight: bold;
 }
@@ -213,6 +454,17 @@ html #top-button:visited {
 	font-size: 16px;
 	font-family: Inconsolata, monospace;
 }
+
+
+@media screen and (max-width:480px) {
+	.experience .job__time {
+		font-size: 15px;
+	}
+}
+
+
+
+
 
 
 
@@ -228,6 +480,13 @@ html #top-button:visited {
 	font-family: Inconsolata, monospace;
 	margin-top: 70px;
 	color: #131417;
+	text-align: center;
+	position: relative; 
+	top: 10px;
+	left: 20%;
+	width: 700px;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
 }
 
 .status__light {
@@ -256,6 +515,37 @@ html #top-button:visited {
 	border: 3px solid #bada55;
 	border-radius: 30px;
 }
+
+@media screen and (max-width:850px) {
+	.status {
+		position: relative; 
+		top: 10px;
+		left: 5%;
+		text-align: left;
+		width: auto;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.status {
+		position: relative; 
+		top: 10px;
+		text-align: left;
+		width: auto;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.status {
+		position: relative; 
+		top: 10px;
+		text-align: left;
+		width: auto;
+	}
+}
+
+
+
 @-webkit-keyframes pulsate {
 	0% {
 		-webkit-transform: scale(.1, .1);
@@ -273,6 +563,7 @@ html #top-button:visited {
 		opacity: 0;
 	}
 }
+
 @keyframes pulsate {
 	0% {
 		-webkit-transform: scale(.1, .1);
@@ -303,28 +594,103 @@ html #top-button:visited {
 	margin-left: 15px;
 }
 
+
+
+
+
 /* Footer. */
 .footer {
 	padding-top: 50px;
 	padding-bottom: 10px;
-	padding-right: 10px;
 	margin-right: 4px;
-	width: 1174px;
+	width: 90%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
+	-webkit-box-align: left;
+	-ms-flex-align: left;
 	align-items: center;
+}
+
+@media screen and (max-width:1024px) {
+	.footer {
+		padding: 10px;
+		margin-right: 4px;
+		width: 90%;
+	}
+}
+
+@media screen and (max-width:850px) { 
+	.footer {
+		padding: 8px;
+		margin-right: 4px;
+		width: 90%;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.footer {
+		padding: 8px;
+		margin-right: 0px;
+	}
+}
+
+@media screen and (max-width:630px) {
+	.footer {
+		display: block;
+		margin-right: 0px;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.footer {
+		padding-top: 50px;
+		padding-bottom: 10px;
+		padding-right: 10px;
+	}
 }
 
 .footer__copyright {
 	font-weight: 400;
 	width: 200px;
 	padding-left: 10px;
+}
+
+
+@media screen and (max-width:630px) {
+	.footer__copyright {
+		width: auto;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+}
+
+@media screen and (max-width:630px) {
+	.footer__copyright .bottom,
+	.footer__copyright .top {
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.footer__copyright .bottom,
+	.footer__copyright .top {
+		display: block;
+	}
+}
+
+@media screen and (max-width:630px) {
+	.footer__links {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
 }
 
 .footer__links a {
@@ -339,6 +705,20 @@ html #top-button:visited {
 	text-decoration-style: none;
 	font-size: 1.8em;
 }
+
+@media screen and (max-width:1024px) {
+	.footer__links a {
+		margin: 0 10px;
+	}
+}
+
+@media screen and (max-width:850px) {
+	.footer__links a {
+		padding-right: 5px;
+		margin: 0px 10px 0px 4px;
+	}
+}
+
 
 .footer__links a:after {
 	position: absolute;
@@ -358,6 +738,12 @@ html #top-button:visited {
 	text-decoration: none;
 	text-decoration-style: none;
 	font-size: 1.8em;
+}
+
+@media screen and (max-width:850px) {
+	.footer__links a:after {
+		display: none;
+	}
 }
 
 .footer__links a:hover {
@@ -391,31 +777,25 @@ html #top-button:visited {
 	text-decoration-style: none;
 }
 
-/* ** page not found??? ** */
+@media screen and (max-width:850px) {
+	.footer__links a .text {
+		display: none;
+	}
+}
+
+
+
+/* Page not found. */
 .not-found {
 	width: 100%;
-	height: 100vh;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
 	text-align: center;
 	padding: 0 20px;
 }
 
 .not-found .name {
 	position: absolute;
-	top: 25px;
-	left: 30px;
+	top: 20px;
+	left: 25px;
 	font-weight: 700;
 	color: #007bff;
 	font-size: 1.5rem;
@@ -423,7 +803,9 @@ html #top-button:visited {
 
 .not-found h1 {
 	font-size: 4rem;
-	margin: 10px 0;
+	margin-top: 45px;
+	margin-bottom: 30px;
+	padding-top: 20px;
 }
 
 .not-found h2 {
@@ -437,34 +819,84 @@ html #top-button:visited {
 	display: inline-block;
 }
 
-.not-found a:after {
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 3px;
-	background: #007bff;
-	content: '';
-	opacity: 0;
-	-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-	transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-	transition: height 0.3s, opacity 0.3s, transform 0.3s;
-	transition: height 0.3s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
-	-webkit-transform: translateY(-10px);
-	transform: translateY(-10px);
-}
-
-.not-found a:focus:after,
-.not-found a:hover:after {
-	height: 3px;
-	opacity: 1;
-	-webkit-transform: translateY(-5px);
-	transform: translateY(-5px);
+.not-found .highlight-link {
+	font-weight: 700;
 	text-decoration: none;
+	display: inline-block;
+	padding: 2px 4px;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	text-decoration: none;
+	-webkit-box-shadow: inset 0 -3px 0 #007bff;
+	box-shadow: inset 0 -3px 0 #007bff;
+}
+
+.not-found .highlight-link:hover {
+	-webkit-box-shadow: inset 0 -38px 0 0 #007bff;
+	box-shadow: inset 0 -38px 0 0 #007bff;
+	color: #fff!important;
 }
 
 
+@media screen and (max-width:480px) {
+	.not-found {
+		padding: 5px 10px;
+	}
+	
+	.not-found h1 {
+		font-size: 30px;
+		margin: 50px 0 10px 0;
+	}
 
+	.not-found h2 {
+		font-size: 10px;
+	}
+	
+	.not-found .name {
+		position: absolute;
+		top: 10px;
+		left: 25px;
+		font-weight: 700;
+		color: #007bff;
+		font-size: 13px;
+	}
+	
+	.not-found .not-found-pic {
+		max-width: 80%;
+		max-height: 80%;
+	}
+	
+}
+
+@media screen and (max-width:320px) {
+	.not-found {
+		padding: 5px 10px;
+	}
+	
+	.not-found h1 {
+		font-size: 30px;
+		margin: 50px 0 10px 0;
+	}
+
+	.not-found h2 {
+		font-size: 10px;
+	}
+	
+	.not-found .name {
+		position: absolute;
+		top: 20px;
+		left: 25px;
+		font-weight: 700;
+		color: #007bff;
+		font-size: 13px;
+	}
+	
+	.not-found .not-found-pic {
+		max-width: 80%;
+		max-height: 80%;
+	}
+	
+}
 
 
 
@@ -474,13 +906,20 @@ html #top-button:visited {
 body #down-button,
 html #down-button {
 	border: none;
-	outline: 0;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	outline: none;
 	cursor: pointer;
 	-webkit-transition: all 0.25s ease;
 	-moz-transition: all 0.25s ease;
 	-ms-transition: all 0.25s ease;
 	-o-transition: all 0.25s ease;
 	transition: all 0.25s ease;
+	position: relative; 
+	width: 50%; 
+	top: 70px;
+	left: 25%;
+	
 }
 
 body #down-button:hover,
@@ -503,6 +942,45 @@ html #down-button:visited {
 }
 
 
+@media screen and (max-width:1024px) {
+	body #down-button,
+	html #down-button {
+		border: none;
+		background-color: Transparent;
+		background-repeat: no-repeat;
+		outline: none;
+		position: relative;
+		top: 4px;
+	}
+}
+
+@media screen and (max-width:480px) {
+	body #down-button,
+	html #down-button {
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width:320px) {
+	body #down-button,
+	html #down-button {
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width:480px) {
+	body #down-arrow,
+	html #down-arrow {
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width:320px) {
+	body #down-arrow,
+	html #down-arrow {
+		visibility: hidden;
+	}
+}
 
 
 
@@ -511,7 +989,9 @@ html #down-button:visited {
 body #middle-button,
 html #middle-button {
 	border: none;
-	outline: 0;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	outline: none;
 	cursor: pointer;
 	-webkit-transition: all 0.25s ease;
 	-moz-transition: all 0.25s ease;
@@ -539,12 +1019,43 @@ html #middle-button:visited {
 	text-decoration-style: none;
 }
 
+@media screen and (max-width:1024px) {
+	body #middle-button,
+	html #middle-button {
+		border: none;
+		background-color: Transparent;
+		background-repeat: no-repeat;
+		outline: none;
+	}
+}
+@media screen and (max-width:480px) {
+	body #middle-button,
+	html #middle-button {
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width:320px) {
+	body #middle-button,
+	html #middle-button {
+		visibility: hidden;
+	}
+}
 
 
+@media screen and (max-width:480px) {
+	body #middle-arrow,
+	html #middle-arrow {
+		visibility: hidden;
+	}
+}
 
-
-
-
+@media screen and (max-width:320px) {
+	body #middle-arrow,
+	html #middle-arrow {
+		visibility: hidden;
+	}
+}
 
 
 
@@ -559,13 +1070,10 @@ html #middle-button:visited {
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-	
     position: absolute;
     z-index: 1;
-    
 	top: 10px;
     left: 57%;
-    
     opacity: 0;
     transition: opacity 1s;
 }
@@ -597,13 +1105,10 @@ html #middle-button:visited {
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-	
     position: absolute;
     z-index: 1;
-    
 	top: 10px;
     left: 57%;
-    
     opacity: 0;
     transition: opacity 1s;
 }
@@ -623,6 +1128,403 @@ html #middle-button:visited {
     visibility: visible;
     opacity: 1;
 }
+
+
+
+
+
+
+/* Day/Night toggle. */
+body .toggle,
+html .toggle {
+	display: block;
+	text-align: right;
+	margin-top: 20px;
+	user-select: none;
+	position: absolute;
+	top: 20px;
+	right: 35px;
+}
+
+body .toggle--checkbox,
+html .toggle--checkbox {
+	display: none;
+}
+
+body .toggle--btn,
+html .toggle--btn {
+	display: block;
+	margin: 0 auto;
+	font-size: 18px;
+	transition: all 350ms ease-in;
+}
+
+body .toggle--btn:hover,
+html .toggle--btn:hover {
+	cursor: pointer;
+}
+
+.toggle--btn,
+.toggle--btn:after,
+.toggle--btn:before,
+.toggle--checkbox,
+.toggle--checkbox:after,
+.toggle--checkbox:before,
+.toggle--feature,
+.toggle--feature:after,
+.toggle--feature:before {
+	transition: all 250ms ease-in;
+}
+
+.toggle--btn:after,
+.toggle--btn:before,
+.toggle--checkbox:after,
+.toggle--checkbox:before,
+.toggle--feature:after,
+.toggle--feature:before {
+	content: '';
+	display: block;
+}
+
+.toggle--daynight .toggle--btn {
+	position: relative;
+	height: 70px;
+	width: 125px;
+	border-radius: 70px;
+}
+
+.toggle--daynight .toggle--btn:before {
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+}
+
+.toggle--daynight .toggle--btn {
+	border: 5px solid #1c1c1c;
+	background-color: #3c4145;
+}
+
+.toggle--daynight .toggle--btn:before {
+	background-color: #fff;
+	border: 5px solid #e3e3c7;
+}
+
+.toggle--daynight .toggle--btn:after {
+	position: absolute;
+	top: 62%;
+	left: 39px;
+	z-index: 10;
+	width: 11.2px;
+	height: 11.2px;
+	opacity: 0;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: #fff 0 0, #fff 3px 0, #fff 6px 0, #fff 9px 0, #fff 11px 0, #fff 14px 0, #fff 16px 0, #fff 21px -1px 0 1px, #fff 16px -7px 0 -2px, #fff 7px -7px 0 1px, #d3d3d3 0 0 0 4px, #d3d3d3 6px 0 0 4px, #d3d3d3 11px 0 0 4px, #d3d3d3 16px 0 0 4px, #d3d3d3 21px -1px 0 5px, #d3d3d3 16px -7px 0 1px, #d3d3d3 7px -7px 0 5px;
+	transition: opacity 100ms ease-in;
+}
+
+@keyframes starry_star {
+	50% {
+		background-color: rgba(255, 255, 255, 0.1);
+		box-shadow: #fff 30px -3px 0 0, #fff 12px 10px 0 -1px, rgba(255, 255, 255, 0.1) 38px 18px 0 1px, #fff 32px 34px 0 0, rgba(255, 255, 255, 0.1) 20px 24px 0 -1.5px, #fff 5px 38px 0 1px;
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+
+	50% {
+		opacity: 100;
+		transform: scale(1.1);
+	}
+
+	55% {
+		transform: scale(1.1);
+	}
+
+	75% {
+		transform: scale(0.9);
+	}
+
+	100% {
+		opacity: 100;
+		transform: scale(1);
+	}
+}
+
+.toggle--daynight .toggle--feature {
+	display: block;
+	position: absolute;
+	top: 9px;
+	left: 52.5%;
+	z-index: 20;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: rgba(255, 255, 255, 0.1) 30px -3px 0 0, rgba(255, 255, 255, 0.1) 12px 10px 0 -1px, #fff 38px 18px 0 1px, rgba(255, 255, 255, 0.1) 32px 34px 0 0, #fff 20px 24px 0 -1.5px, rgba(255, 255, 255, 0.1) 5px 38px 0 1px;
+	animation: starry_star 5s ease-in-out infinite;
+}
+
+.toggle--daynight .toggle--feature:before {
+	position: absolute;
+	top: -2px;
+	left: -25px;
+	width: 18px;
+	height: 18px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 5px solid #e3e3c7;
+	box-shadow: #e3e3c7 -28px 0 0 -3px, #e3e3c7 -8px 24px 0 -2px;
+	transform-origin: -6px 130%;
+}
+
+.toggle--daynight .toggle--checkbox:checked+.toggle--btn {
+	background-color: #9ee3fb;
+	border: 5px solid #86c3d7;
+}
+
+.toggle--daynight .toggle--checkbox:checked+.toggle--btn:before {
+	left: 55px;
+	background-color: #ffdf6d;
+	border: 5px solid #e1c348;
+}
+
+.toggle--daynight .toggle--checkbox:checked+.toggle--btn:after {
+	opacity: 100;
+	animation-name: bounceIn;
+	animation-duration: 0.60s;
+	animation-delay: 0.10s;
+	animation-fill-mode: backwards;
+	animation-timing-function: ease-in-out;
+}
+
+.toggle--daynight .toggle--checkbox:checked+.toggle--btn > .toggle--feature {
+	opacity: 0;
+	box-shadow: rgba(255, 255, 255, 0.1) 30px -3px 0 -4px, rgba(255, 255, 255, 0.1) 12px 10px 0 -5px, #fff 38px 18px 0 -3px, rgba(255, 255, 255, 0.1) 32px 34px 0 -4px, #fff 20px 24px 0 -5.5px, rgba(255, 255, 255, 0.1) 5px 38px 0 -3px;
+	animation: none;
+}
+
+.toggle--daynight .toggle--checkbox:checked+.toggle--btn > .toggle--feature:before {
+	left: 25px;
+	transform: rotate(70deg);
+}
+
+
+
+/* Change the background color when the Day/Night toggle is clicked. */
+body.night {
+	background-color: #131417;
+	color: #afafbf;
+}
+
+body.night ::-moz-selection,
+html.night ::-moz-selection {
+	color: #36363c;
+	background: #fff10d;
+}
+
+body.night ::selection,
+html.night ::selection {
+	color: #36363c;
+	background: #fff10d;
+}
+
+body.night .experience .job__time,
+body.night .footer__copyright,
+body.night .intro,
+body.night .skills .skills__category__label,
+body.night .status__message,
+body.night a,
+body.night strong,
+html.night .experience .job__time,
+html.night .footer__copyright,
+html.night .intro,
+html.night .skills .skills__category__label,
+html.night .status__message,
+html.night a,
+html.night strong {
+	color: #e7e7e7;
+}
+
+body.night .section__content .underline-link:after,
+html.night .section__content .underline-link:after {
+	background: #e7e7e7;
+}
+
+/* Change the color of the 'down' arrows when the Day/Night toggle is clicked. */
+body.night .fa-arrow-down,
+html.night .fa-arrow-down {
+	color: #e7e7e7;
+}
+
+/* Change the color of the 'go to top' arrow when the Day/Night toggle is clicked. */
+body.night #top-button,
+html.night #top-button {
+	color: #e7e7e7;
+}
+
+/* Change the color of my name at the top of the page when the Day/Night toggle is clicked. */
+body.night .name,
+html.night .name {
+	color: #F0F0F0;
+}
+
+
+
+
+
+
+
+/* Star wars toggle icon */
+#nav-container {
+	display: block;
+	text-align: left;
+	margin-top: 20px;
+	user-select: none;
+	position: absolute;
+	top: 40px;
+	left: 35px;
+	font-size: 20px;
+}
+
+@media screen and (max-width:480px) {
+	body .menu,
+	html .menu, {
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+	
+	#nav-container {
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	body .menu,
+	html .menu, {
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+	
+	#nav-container {
+		margin-bottom: 20px;
+		font-size: 16px;
+	}
+}
+
+/* Toggle icon. */
+.starwars-toggle {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: -2.2em auto 0 0.2em;
+	-webkit-transition: margin 600ms;
+	-moz-transition: margin 600ms;
+	transition: margin 600ms;
+	cursor: pointer;
+}
+
+.starwars-toggle .bar {
+	display: block;
+	width: 3.8em;
+	height: 0.2em;
+	margin: 0.9em;
+	border-right: 2.8em solid #dbdbdb;
+	border-left: 0.6em solid #c0c0c0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
+	-moz-transition-property: -moz-transform, margin, border-right-color, box-shadow;
+	transition-property: transform, margin, border-right-color, box-shadow;
+	-webkit-transition-duration: 600ms;
+	-moz-transition-duration: 600ms;
+	transition-duration: 600ms;
+}
+
+body.night .starwars-toggle .bar,
+html.night .starwars-toggle .bar{
+	border-right: 2.8em solid #fff;
+}
+.starwars-toggle .bar:nth-of-type(1) {
+	-webkit-transition: opacity 300ms;
+	-moz-transition: opacity 300ms;
+	transition: opacity 300ms;
+}
+.starwars-toggle .bar:nth-of-type(2) {
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
+
+/* Clicked. */
+.pushed .starwars-toggle {
+	margin: -3.2em 0 0 0.7em;
+}
+
+.pushed .bar:nth-of-type(1) {
+	opacity: 0;
+}
+
+.pushed .bar:nth-of-type(2) {
+	margin-left: 1.4em;
+	-webkit-transform: rotate(-137deg) translateY(-1.5em);
+	-moz-transform: rotate(-137deg) translateY(-1.5em);
+	-ms-transform: rotate(-137deg) translateY(-1.5em);
+	-o-transform: rotate(-137deg) translateY(-1.5em);
+	transform: rotate(-137deg) translateY(-1.5em);
+}
+
+.pushed .bar:nth-of-type(3) {
+	margin-left: 0.5em;
+	-webkit-transform: rotate(-42deg);
+	-moz-transform: rotate(-42deg);
+	-ms-transform: rotate(-42deg);
+	-o-transform: rotate(-42deg);
+	transform: rotate(-42deg);
+}
+
+
+.pushed .starwars-toggle:hover .bar:nth-of-type(2) {
+	border-right-color: #e9b8b9;
+	box-shadow: 0.4em 0 0.6em 0.1em rgba(205,40,44,0.75);
+}
+.pushed .starwars-toggle:hover .bar:nth-of-type(3) {
+	border-right-color: #ddf1da;
+	box-shadow: 0.4em 0 0.6em 0.1em rgba(83,228,68,0.65);
+}
+
+
+body.night .pushed .starwars-toggle:hover .bar:nth-of-type(2),
+html.night .pushed .starwars-toggle:hover .bar:nth-of-type(2) {
+	box-shadow: 0.4em 0 0.8em 0.2em rgba(205,40,44,0.75);
+}
+
+
+body.night .pushed .starwars-toggle:hover .bar:nth-of-type(3),
+html.night .pushed .starwars-toggle:hover .bar:nth-of-type(3) {
+	box-shadow: 0.4em 0 0.8em 0.2em rgba(83,228,68,0.65);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
