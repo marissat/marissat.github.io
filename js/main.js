@@ -16,7 +16,7 @@ window.sr = ScrollReveal({
 });
 
 // Custom ScrollReveal settings.
-sr.reveal(".section"), sr.reveal(".skills_title"), sr.reveal(".background"), sr.reveal(".skills"), sr.reveal(".experience"), sr.reveal(".projects"), {
+sr.reveal(".section"), sr.reveal(".skills_title"), sr.reveal(".skills"), sr.reveal(".experience"), sr.reveal(".projects", {
 	duration: 5000 
 });
 
