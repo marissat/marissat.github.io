@@ -16,11 +16,21 @@ window.sr = ScrollReveal({
 });
 
 // Custom ScrollReveal settings.
-sr.reveal(".section"), sr.reveal(".skills_title"), sr.reveal(".skills"), sr.reveal(".experience"), sr.reveal(".projects", {
-	duration: 3000 
+sr.reveal(".section", {
+	duration: 1000 
 });
 
+sr.reveal(".skills", {
+	duration: 1000 
+});
 
+sr.reveal(".experience", {
+	duration: 1000 
+});
+
+sr.reveal(".projects", {
+	duration: 1000 
+});
 
 
 // Button that takes you to the top of the "skills" section.
