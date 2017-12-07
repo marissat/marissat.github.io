@@ -16,8 +16,8 @@ window.sr = ScrollReveal({
 });
 
 // Custom ScrollReveal settings.
-sr.reveal(".section"), sr.reveal(".skills_title"), sr.reveal(".background"), sr.reveal(".skills"), sr.reveal(".experience", {
-	duration: 3000 
+sr.reveal(".section"), sr.reveal(".skills_title"), sr.reveal(".background"), sr.reveal(".skills"), sr.reveal(".experience"), sr.reveal(".projects"), {
+	duration: 5000 
 });
 
 
@@ -38,7 +38,17 @@ $(function() {
 $(function() {
 	$('#middle-button').click(function() {
 		$('html, body').animate({
-			scrollTop: $("#experience_section").offset().top - 100
+			scrollTop: $("#experience_section").offset().top - 70
+		}, 'slow');
+	});
+});
+
+
+// Button that takes you to the top of the "projects" section.
+$(function() {
+	$('#projects-button').click(function() {
+		$('html, body').animate({
+			scrollTop: $("#projects_section").offset().top - 100
 		}, 'slow');
 	});
 });

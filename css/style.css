@@ -1061,6 +1061,114 @@ html #middle-button:visited {
 
 
 
+
+
+
+
+
+
+
+
+/* Button that scrolls down to the "projects" section. */
+body #projects-button,
+html #projects-button {
+	border: none;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	outline: none;
+	cursor: pointer;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-ms-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+}
+
+body #projects-button:hover,
+html #projects-button:hover {
+	-webkit-transform: translate(0px, -10px);
+	-moz-transform: translate(0px, -10px);
+	-ms-transform: translate(0px, -10px);
+	-o-transform: translate(0px, -10px);
+	transform: translate(0px, -10px);
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+body #projects-button:visited,
+html #projects-button:visited {
+	-webkit-transform: translateY(8px);
+	transform: translateY(8px);
+	text-decoration: none;
+	text-decoration-style: none;
+}
+
+@media screen and (max-width:1024px) {
+	body #projects-button,
+	html #projects-button {
+		border: none;
+		background-color: Transparent;
+		background-repeat: no-repeat;
+		outline: none;
+	}
+}
+@media screen and (max-width:480px) {
+	body #projects-button,
+	html #projects-button {
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width:320px) {
+	body #projects-button,
+	html #projects-button {
+		visibility: hidden;
+	}
+}
+
+
+@media screen and (max-width:480px) {
+	body #projects-arrow,
+	html #projects-arrow {
+		visibility: hidden;
+	}
+}
+
+@media screen and (max-width:320px) {
+	body #projects-arrow,
+	html #projects-arrow {
+		visibility: hidden;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Tooltip for the button that scrolls down to the "skills" section. */
 .down-button .tooltiptext {
     visibility: hidden;
@@ -1128,6 +1236,71 @@ html #middle-button:visited {
     visibility: visible;
     opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
+/* Tooltip for the button that scrolls down to the "projects" section. */
+.projects-button .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+	top: 10px;
+    left: 57%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.projects-button .tooltiptext::after {
+    content: " ";
+    position: absolute;
+	top: 30%;
+    right: 100%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+
+.projects-button:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1516,6 +1689,82 @@ html.night .pushed .starwars-toggle:hover .bar:nth-of-type(3) {
 	box-shadow: 0.4em 0 0.8em 0.2em rgba(83,228,68,0.65);
 }
 
+
+
+
+/* Projects section. */
+.projects .project {
+	max-width: 600px;
+	margin-bottom: 60px;
+}
+.projects .project__name {
+	/*margin-bottom: 10px;*/
+	margin-bottom: 5px;
+}
+
+
+
+.projects .class {
+	/*margin-bottom: 10px;*/
+	font-family: Raleway; 
+	/*font-family: Inconsolata, monospace;*/
+	/*font-family: Inconsolata;*/
+	/*font-weight: 300;*/
+	/*font-weight: 700;*/
+	font-weight: 400;
+	font-size: 14px;
+	color: #007bff;
+}
+.projects .project p {
+	font-size: .9rem;
+	/*margin-bottom: 20px;*/
+	margin-bottom: 15px;
+	margin-top: 5px;
+}
+.projects .project__used__item {
+	display: inline-block;
+	margin: 3px 3px 3px 0;
+	font-family: Raleway, monospace;
+	font-size: .75rem;
+	font-weight: 700;
+	padding: 2px 7px;
+	border-radius: 3px;
+	color: #007bff;
+	border: 1px solid #007bff;
+	background: 0 0;
+}
+.projects .project__used__item:first-of-type {
+	margin-left: 0;
+}
+
+
+
+
+body .arrow-link, html .arrow-link {
+	font-weight: 700;
+	display: inline-block;
+	-webkit-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
+	background-color: transparent;
+	white-space: nowrap;
+}
+body .arrow-link:after, html .arrow-link:after {
+	position: relative;
+	bottom: 2px;
+	margin-left: 15px;
+	content: "";
+	background: url(../img/arrow.png) no-repeat center;
+	background-size: 100%;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transition: all .15s ease-in-out;
+}
+body .arrow-link:hover:after, html .arrow-link:hover:after {
+	-webkit-transform: translateX(7px);
+	transform: translateX(7px);
+}
 
 
 
