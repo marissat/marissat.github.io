@@ -1,5 +1,11 @@
 // Custom JavaScript for my personal website.
 
+// Marissa Tavano
+// 2017
+
+
+
+
 
 // Reset page to top when the page is refreshed.
 $(document).ready(function(){
@@ -46,6 +52,9 @@ sr.reveal(".projects", {
 });
 
 
+
+
+
 // Button that takes you to the top of the "skills" section.
 $(function() {
 	$('#down-button').click(function() {
@@ -54,7 +63,6 @@ $(function() {
 		}, 'slow');
 	});
 });
-
 
 
 // Button that takes you to the top of the "experience" section.
@@ -77,7 +85,6 @@ $(function() {
 });
 
 
-
 // Button that scrolls back to the top of the page.
 $(function() {
 	const r = document.querySelector("#header_top").offsetHeight,
@@ -94,6 +101,8 @@ $(function() {
 	
 	
 });
+
+
 
 
 // Day/Night toggle & Star Wars toggle.
