@@ -83,16 +83,16 @@ html strong {
 /*************************************/
 /*      Modified CSS for Firefox.    */
 /*************************************/
-@-moz-document url-prefix() {
+@-moz-document url-prefix() {	
 	body .toggle,
 	html .toggle {
 		display: block;
 		text-align: right;
-		margin-top: 10px;
+		margin-top: 10px !important;
 		user-select: none;
 		position: absolute;
-		top: 5px;
-		right: 15px;
+		top: 5px !important;
+		right: 15px !important;
 	}
 
 	.projects .project {
@@ -622,6 +622,13 @@ html .arrow-link {
 	padding-left: 10px;
 }
 
+@media screen and (min-width:1300px) {
+	.footer__copyright {
+		margin-left: 15px;
+		margin-bottom: 5px;
+	}
+}
+
 @media screen and (max-width:630px) {
 	.footer__copyright {
 		width: auto;
@@ -792,6 +799,13 @@ html #top-button i {
 	justify-content: center;
 }
 
+@media screen and (min-width:1300px) {
+	body #top-button,
+	html #top-button {
+		right: 25px;
+	}
+}
+
 @media screen and (max-width:1024px) {
 	body #top-button,
 	html #top-button {
@@ -859,12 +873,17 @@ html #top-button i {
 	margin-top: 70px;
 	color: #131417;
 	text-align: center;
-	position: relative;
-	top: 10px;
-	left: 20%;
-	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
+}
+
+@media screen and (min-width:1300px) {
+	.status {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .status__light {
