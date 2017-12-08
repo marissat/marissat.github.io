@@ -12,7 +12,8 @@ $(document).ready(function(){
 
 // General ScrollReveal settings.
 window.sr = ScrollReveal({ 
-	reset: true 
+	reset: false,
+	mobile: false 
 });
 
 // Custom ScrollReveal settings.
@@ -24,7 +25,19 @@ sr.reveal(".skills", {
 	duration: 1000 
 });
 
+sr.reveal(".skills_title", {
+	duration: 1000 
+});
+
+sr.reveal(".middle-button", {
+	duration: 1000 
+});
+
 sr.reveal(".experience", {
+	duration: 1000 
+});
+
+sr.reveal(".projects-button", {
 	duration: 1000 
 });
 
@@ -37,7 +50,7 @@ sr.reveal(".projects", {
 $(function() {
 	$('#down-button').click(function() {
 		$('html, body').animate({
-			scrollTop: $("#skills_section").offset().top - 110
+			scrollTop: $("#skills_section").offset().top - 100
 		}, 'slow');
 	});
 });
@@ -83,7 +96,7 @@ $(function() {
 });
 
 
-
+// Day/Night toggle & Star Wars toggle.
 $(function() {
 	const t = new Date,
 		o = t.getHours(),
@@ -106,7 +119,6 @@ $(function() {
 
 
 
-	
-	
+
 
 
