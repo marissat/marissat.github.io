@@ -138,6 +138,8 @@ html .name {
 	}
 }
 
+
+
 body .section,
 html .section {
 	display: -webkit-box;
@@ -255,6 +257,8 @@ html .section__content p {
 	margin-bottom: 25px;
 }
 
+
+
 body .small,
 html .small {
 	font-family: Inconsolata, monospace;
@@ -278,6 +282,8 @@ html .skills__category {
 	width: auto;
 	padding: 0 15px;
 }
+
+
 
 /* Button that takes you back to the top of the page. */
 body #top-button,
@@ -369,6 +375,8 @@ html #top-button i {
 	}
 }
 
+
+
 /* "SKILLS" section. */
 .skills_title .skills {
 	display: -webkit-box;
@@ -405,6 +413,8 @@ html #top-button i {
 	margin: 2px 0;
 	font-size: 16px;
 }
+
+
 
 /* "EXPERIENCE" section. */
 .experience .jobs {
@@ -444,6 +454,8 @@ html #top-button i {
 		font-size: 15px;
 	}
 }
+
+
 
 /* LED bullet. */
 .status {
@@ -568,6 +580,8 @@ html #top-button i {
 .status__message {
 	margin-left: 15px;
 }
+
+
 
 /* Footer. */
 .footer {
@@ -752,6 +766,8 @@ html #top-button i {
 	}
 }
 
+
+
 /* Page not found. */
 .not-found {
 	width: 100%;
@@ -864,6 +880,8 @@ html #top-button i {
 
 }
 
+
+
 /* Button that scrolls down to the "skills" section. */
 body #down-button,
 html #down-button {
@@ -943,6 +961,8 @@ html #down-button:visited {
 	}
 }
 
+
+
 /* Button that scrolls down to the "experience" section. */
 body #middle-button,
 html #middle-button {
@@ -1013,6 +1033,8 @@ html #middle-button:visited {
 		visibility: hidden;
 	}
 }
+
+
 
 /* Button that scrolls down to the "projects" section. */
 body #projects-button,
@@ -1085,6 +1107,8 @@ html #projects-button:visited {
 	}
 }
 
+
+
 /* Tooltip for the button that scrolls down to the "skills" section. */
 .down-button .tooltiptext {
 	visibility: hidden;
@@ -1117,6 +1141,8 @@ html #projects-button:visited {
 	visibility: visible;
 	opacity: 1;
 }
+
+
 
 /* Tooltip for the button that scrolls down to the "experience" section. */
 .middle-button .tooltiptext {
@@ -1151,6 +1177,8 @@ html #projects-button:visited {
 	opacity: 1;
 }
 
+
+
 /* Tooltip for the button that scrolls down to the "projects" section. */
 .projects-button .tooltiptext {
 	visibility: hidden;
@@ -1184,6 +1212,8 @@ html #projects-button:visited {
 	opacity: 1;
 }
 
+
+
 /* Day/Night toggle. */
 body .toggle,
 html .toggle {
@@ -1192,8 +1222,8 @@ html .toggle {
 	margin-top: 20px;
 	user-select: none;
 	position: absolute;
-	top: 20px;
-	right: 35px;
+	top: 40px;
+	right: 65px;
 }
 
 body .toggle--checkbox,
@@ -1234,6 +1264,11 @@ html .toggle--btn:hover {
 .toggle--feature:before {
 	content: '';
 	display: block;
+}
+
+/* (Adjust the Day/Night toggle for Firefox.) */
+.toggle--daynight {
+	-moz-transform: scale(0.5); /* Equal to scaleX(0.5) scaleY(0.5) */
 }
 
 .toggle--daynight .toggle--btn {
@@ -1366,6 +1401,8 @@ html .toggle--btn:hover {
 	transform: rotate(70deg);
 }
 
+
+
 /* Change the background color when the Day/Night toggle is clicked. */
 body.night {
 	background-color: #131417;
@@ -1384,6 +1421,7 @@ html.night ::selection {
 	background: #fff10d;
 }
 
+body.night .arrow-link,
 body.night .experience .job__time,
 body.night .footer__copyright,
 body.night .intro,
@@ -1391,6 +1429,7 @@ body.night .skills .skills__category__label,
 body.night .status__message,
 body.night a,
 body.night strong,
+html.night .arrow-link,
 html.night .experience .job__time,
 html.night .footer__copyright,
 html.night .intro,
@@ -1401,10 +1440,32 @@ html.night strong {
 	color: #e7e7e7;
 }
 
+body.night p,
+html.night p {
+	font-weight: 400;
+}
+
+body.night .class,
+html.night .class {
+	font-weight: 500;
+}
+
+body.night .job__position,
+html.night .job__position {
+	font-weight: 400 !important;
+}
+
+body.night .skills__category__item,
+html.night .skills__category__item {
+	font-weight: 400 !important;
+}
+
 body.night .section__content .underline-link:after,
 html.night .section__content .underline-link:after {
 	background: #e7e7e7;
 }
+
+
 
 /* Change the color of the 'down' arrows when the Day/Night toggle is clicked. */
 body.night .fa-arrow-down,
@@ -1412,17 +1473,23 @@ html.night .fa-arrow-down {
 	color: #e7e7e7;
 }
 
+
+
 /* Change the color of the 'go to top' arrow when the Day/Night toggle is clicked. */
 body.night #top-button,
 html.night #top-button {
 	color: #e7e7e7;
 }
 
+
+
 /* Change the color of my name at the top of the page when the Day/Night toggle is clicked. */
 body.night .name,
 html.night .name {
 	color: #F0F0F0;
 }
+
+
 
 /* Star wars toggle icon */
 #nav-container {
@@ -1437,7 +1504,6 @@ html.night .name {
 }
 
 @media screen and (max-width:480px) {
-	,
 	body .menu,
 	html .menu {
 		margin-bottom: 20px;
@@ -1451,7 +1517,6 @@ html.night .name {
 }
 
 @media screen and (max-width:320px) {
-	,
 	body .menu,
 	html .menu {
 		margin-bottom: 20px;
@@ -1463,6 +1528,8 @@ html.night .name {
 		font-size: 16px;
 	}
 }
+
+
 
 /* Toggle icon. */
 .starwars-toggle {
@@ -1513,7 +1580,9 @@ html.night .starwars-toggle .bar {
 	transform: rotate(-180deg);
 }
 
-/* Clicked. */
+
+
+/* (When the Star Wars toggle is 'clicked'. */
 .pushed .starwars-toggle {
 	margin: -3.2em 0 0 0.7em;
 }
@@ -1560,10 +1629,72 @@ html.night .pushed .starwars-toggle:hover .bar:nth-of-type(3) {
 	box-shadow: 0.4em 0 0.8em 0.2em rgba(83,228,68,0.65);
 }
 
-/* Projects section. */
+/* The lightsabers should ALWAYS glow when the toggle is 'clicked' on mobile. */
+@media screen and (max-width:480px) {
+	.pushed .starwars-toggle .bar:nth-of-type(2) {
+		border-right-color: #e9b8b9;
+		box-shadow: 0.4em 0 0.6em 0.1em rgba(205,40,44,0.75);
+	}
+
+	.pushed .starwars-toggle .bar:nth-of-type(3) {
+		border-right-color: #ddf1da;
+		box-shadow: 0.4em 0 0.6em 0.1em rgba(83,228,68,0.65);
+	}
+
+	body.night .pushed .starwars-toggle .bar:nth-of-type(2),
+	html.night .pushed .starwars-toggle .bar:nth-of-type(2) {
+		box-shadow: 0.4em 0 0.8em 0.2em rgba(205,40,44,0.75);
+	}
+
+	body.night .pushed .starwars-toggle .bar:nth-of-type(3),
+	html.night .pushed .starwars-toggle .bar:nth-of-type(3) {
+		box-shadow: 0.4em 0 0.8em 0.2em rgba(83,228,68,0.65);
+	}
+}
+
+@media screen and (max-width:320px) {
+	.pushed .starwars-toggle .bar:nth-of-type(2) {
+		border-right-color: #e9b8b9;
+		box-shadow: 0.4em 0 0.6em 0.1em rgba(205,40,44,0.75);
+	}
+
+	.pushed .starwars-toggle .bar:nth-of-type(3) {
+		border-right-color: #ddf1da;
+		box-shadow: 0.4em 0 0.6em 0.1em rgba(83,228,68,0.65);
+	}
+
+	body.night .pushed .starwars-toggle .bar:nth-of-type(2),
+	html.night .pushed .starwars-toggle .bar:nth-of-type(2) {
+		box-shadow: 0.4em 0 0.8em 0.2em rgba(205,40,44,0.75);
+	}
+
+	body.night .pushed .starwars-toggle .bar:nth-of-type(3),
+	html.night .pushed .starwars-toggle .bar:nth-of-type(3) {
+		box-shadow: 0.4em 0 0.8em 0.2em rgba(83,228,68,0.65);
+	}
+
+}
+
+
+
+/* "PROJECTS" section. */
 .projects .project {
 	max-width: 600px;
 	margin-bottom: 10px;
+}
+
+@media screen and (max-width:480px) {
+	.projects .project {
+		max-width: 600px;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.projects .project {
+		max-width: 600px;
+		margin-bottom: 15px;
+	}
 }
 
 .projects .project__name {
@@ -1609,4 +1740,121 @@ html .arrow-link {
 	background-color: transparent;
 	white-space: nowrap;
 }
+
+.header_top {
+	margin-bottom: 20px !important;
+	padding-bottom: 50px !important;
+}
+
+@media screen and (max-width:480px) {
+	.header_top {
+		margin-bottom: 10px !important;
+		padding-bottom: 10px !important;
+	}
+}
+
+
+/* (Adjusted for Firefox.) */
+.skills_title {
+	padding-top: 50px !important;
+}
+
+@media screen and (max-width:480px) {
+	.skills_title {
+		padding-top: 20px !important;
+		padding-bottom: 20px !important;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.skills_title {
+		padding-top: 15px !important;
+		padding-bottom: 15px !important;
+	}
+}
+
+
+/* (Adjusted for Firefox.) */
+#down-button {
+	margin-bottom: 240px;
+}
+
+@media screen and (max-width:480px) {
+	#down-button {
+		margin-bottom: 140px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	#down-button {
+		margin-bottom: 140px;
+	}
+}
+
+
+/* (Adjusted for Firefox.) */
+.experience {
+	margin-top: 600px;
+	padding-top: 20px;
+}
+
+@media screen and (max-width:480px) {
+	.experience {
+		margin-top: 80px;
+		padding-top: 20px;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.experience {
+		margin-top: 150px;
+		padding-top: 20px;
+	}
+}
+
+
+/* (Adjusted for Firefox.) */
+.projects {
+	padding-top: 500px !important;
+}
+
+@media screen and (max-width:480px) {
+	.projects {
+		padding-top: 70px !important;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.projects {
+		padding-top: 60px !important;
+	}
+}
+
+
+/* Modified CSS for Firefox. */
+@-moz-document url-prefix() {
+	body .toggle,
+	html .toggle {
+		display: block;
+		text-align: right;
+		margin-top: 10px;
+		user-select: none;
+		position: absolute;
+		top: 5px;
+		right: 15px;
+	}
+
+	.projects .project {
+		max-width: 600px;
+		margin-bottom: 40px !important;
+	}
+
+	.projects .project p {
+		font-size: 0.9rem;
+		margin-bottom: 9px;
+		margin-top: 5px;
+	}
+}
+
+
 
