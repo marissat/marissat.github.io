@@ -187,12 +187,6 @@ html .name {
 	}
 }
 
-@media screen and (max-width:320px) {
-	body .name,
-	html .name {
-		margin-top: 40px;
-	}
-}
 
 
 
@@ -1015,6 +1009,7 @@ html #down-button {
 
 }
 
+
 body #down-button:hover,
 html #down-button:hover {
 	-webkit-transform: translate(0px, -10px);
@@ -1043,30 +1038,6 @@ html #down-button:visited {
 		outline: none;
 		position: relative;
 		top: 4px;
-	}
-}
-
-@media screen and (max-width:480px) {
-	body #down-button,
-	html #down-button {
-		visibility: hidden;
-	}
-	
-	body #down-arrow,
-	html #down-arrow {
-		visibility: hidden;
-	}
-}
-
-@media screen and (max-width:320px) {
-	body #down-button,
-	html #down-button {
-		visibility: hidden;
-	}
-	
-	body #down-arrow,
-	html #down-arrow {
-		visibility: hidden;
 	}
 }
 
@@ -1172,29 +1143,6 @@ html #middle-button:visited {
 	}
 }
 
-@media screen and (max-width:480px) {
-	body #middle-button,
-	html #middle-button {
-		visibility: hidden;
-	}
-	
-	body #middle-arrow,
-	html #middle-arrow {
-		visibility: hidden;
-	}
-}
-
-@media screen and (max-width:320px) {
-	body #middle-button,
-	html #middle-button {
-		visibility: hidden;
-	}
-	
-	body #middle-arrow,
-	html #middle-arrow {
-		visibility: hidden;
-	}
-}
 
 
 /* Tooltip for the button that scrolls down to the "experience" section. */
@@ -1277,30 +1225,6 @@ html #projects-button:visited {
 		background-color: Transparent;
 		background-repeat: no-repeat;
 		outline: none;
-	}
-}
-
-@media screen and (max-width:480px) {
-	body #projects-button,
-	html #projects-button {
-		visibility: hidden;
-	}
-	
-	body #projects-arrow,
-	html #projects-arrow {
-		visibility: hidden;
-	}
-}
-
-@media screen and (max-width:320px) {
-	body #projects-button,
-	html #projects-button {
-		visibility: hidden;
-	}
-	
-	body #projects-arrow,
-	html #projects-arrow {
-		visibility: hidden;
 	}
 }
 
@@ -1932,9 +1856,41 @@ html.night .name {
 
 
 
+/* Don't show the down arrows on small screens. */
+body #down-button,
+html #down-button,
+body #down-arrow,
+html #down-arrow,
+body #middle-button,
+html #middle-button,
+body #middle-arrow,
+html #middle-arrow,
+body #projects-button,
+html #projects-button,
+body #projects-arrow,
+html #projects-arrow {
+	visibility: hidden;
+}
 
 
-
+/* Only display the down arrows on screens larger than 1200px wide. */
+@media screen and (min-width: 1200px) {
+	body #down-button,
+	html #down-button,
+	body #down-arrow,
+	html #down-arrow,
+	body #middle-button,
+	html #middle-button,
+	body #middle-arrow,
+	html #middle-arrow,
+	body #projects-button,
+	html #projects-button,
+	body #projects-arrow,
+	html #projects-arrow {
+		visibility: visible;
+	}
+	
+}
 
 
 
